@@ -92,7 +92,7 @@ main {
     padding-top: 3.25rem;
     display: grid;
     grid-template-columns: 1fr 21.6875rem;
-    column-gap: 2.5rem;
+    column-gap: 2rem;
 }
 
 .products-list {
@@ -165,4 +165,35 @@ main {
 .add-btn:hover {
     color: var(--primary-color);
     text-decoration: underline;
+}
+
+aside form {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.search-input {
+    border: none;
+    background-color: var(--grey-0);
+    color: var(--grey-50);
+    padding: 1.0625rem .875rem;
+    border-radius: .375rem;
+    outline: none;
+    font-size: .875rem;
+    font-weight: normal;
+    line-height: 1rem;
+    flex: 1;
+}
+
+.search-btn {
+    appearance: none;
+    border: none;
+    background-color: var(--secondary-color);
+    padding: 1.0625rem .625rem;
+    color: white;
+    font-size: 1rem;
+    line-height: 1rem;
+    font-weight: 500;
+    border-radius: .375rem;
 }
