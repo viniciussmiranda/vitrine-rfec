@@ -14,20 +14,24 @@ function createProductCard(product) {
     div.classList.add("product-card-text");
 
     const category = document.createElement("span");
-    category.classList.add("category");
+    category.classList.add("category", "inter-small");
     category.innerText = product.category;
 
     const name = document.createElement("h2");
     name.innerText = product.name;
+    name.classList.add("inter-title-3");
 
     const description = document.createElement("p");
     description.innerText = product.description;
+    description.classList.add("inter-body", "description");
 
     const price = document.createElement("span");
     price.innerText = new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(product.price);
+    price.classList.add("price", "inter-body-semibold");
 
     const addToCartBtn = document.createElement("button");
     addToCartBtn.innerText = "Adicionar ao carrinho";
+    addToCartBtn.classList.add("add-btn", "inter-body-semibold");
 
     div.append(category, name, description, price, addToCartBtn);
 

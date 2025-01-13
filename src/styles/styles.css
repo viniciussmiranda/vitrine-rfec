@@ -3,45 +3,60 @@
 
 body {
     font-family: "Inter", serif;
+    padding-bottom: 5rem;
 }
 
 .inter-title-1 {
     font-size: 1.75rem;
+    line-height: 2.375rem;
     font-weight: bold;
 }
 
 .inter-title-2 {
     font-size: 1.5rem;
+    line-height: 2.125rem;
     font-weight: bold;
 }
 
 .inter-title-3 {
-    font-size: 1.5625rem;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
     font-weight: bold;
 }
 
 .inter-title-4 {
     font-size: 1rem;
+    line-height: 1.5rem;
     font-weight: bold;
 }
 
 .inter-headline {
     font-size: 1rem;
+    line-height: 1.625rem;
     font-weight: normal;
 }
 
 .inter-body {
     font-size: .875rem;
+    line-height: 1.5rem;
     font-weight: normal;
+}
+
+.inter-body-semibold {
+    font-size: .875rem;
+    line-height: 1rem;
+    font-weight: 600;
 }
 
 .inter-body-bold {
     font-size: .875rem;
+    line-height: 1.5rem;
     font-weight: bold;
 }
 
 .inter-small {
     font-size: .625rem;
+    line-height: 1;
     font-weight: normal;
 }
 
@@ -54,7 +69,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: 75rem;
+    max-width: 87.5rem;
     margin: 0 auto;
 }
 
@@ -72,7 +87,7 @@ h1 {
 }
 
 main {
-    max-width: 75rem;
+    max-width: 87.5rem;
     margin: 0 auto;
     padding-top: 3.25rem;
     display: grid;
@@ -83,22 +98,71 @@ main {
 .products-list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    row-gap: 1.375rem;
-    column-gap: 2.5rem;
+    gap: 1.375rem;
 }
 
 .product-card {
-    max-width: 18.5rem;
+    width: 18.5rem;
     background-color: var(--grey-0);
     border: .125rem solid var(--grey-0);
     border-radius: .5rem;
     overflow: hidden;
+    text-align: center;
+    transition: border-color .2s linear;
+}
+
+.product-card:hover {
+    border-color: var(--secondary-color);
 }
 
 .product-card img {
     width: 12rem;
+    margin-top: .5625rem;
+    margin-bottom: .3125rem;
 }
 
 .product-card > div {
     background-color: white;
+    padding: 1.25rem .75rem 1.25rem .9375rem;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    text-align: left;
+    gap: .9375rem;
+}
+
+.category {
+    background-color: var(--primary-color);
+    color: white;
+    padding: .5rem .3125rem;
+    border-radius: .375rem;
+}
+
+.description {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+            line-clamp: 3;
+    -webkit-box-orient: vertical;
+    margin-bottom: .125rem;
+}
+
+.price {
+    color: var(--primary-color);
+}
+
+.add-btn {
+    appearance: none;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    font-weight: 500;
+    color: var(--grey-50);
+}
+
+.add-btn:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
 }
