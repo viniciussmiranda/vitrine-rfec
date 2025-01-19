@@ -1,16 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- CSS -->
-    <link rel="stylesheet" href="./src/styles/styles.css">
+    <link rel="stylesheet" href="./src/styles/styles.css" />
 
     <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- JS -->
     <script defer type="module" src="./src/scripts/index.js"></script>
@@ -22,32 +25,60 @@
     <meta name="apple-mobile-web-app-title" content="RFEC" />
     <link rel="manifest" href="/site.webmanifest" />
 
-    <meta name="description" content="RFEC - Vitrine">
+    <meta name="description" content="RFEC - Vitrine" />
     <title>Vitrine RFEC</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <nav>
-            <h1>FreshFit</h1>
-            <ul>
-                <li class="inter-headline">Todos</li>
-                <li class="inter-headline">Acessórios</li>
-                <li class="inter-headline">Calçados</li>
-                <li class="inter-headline">Camisetas</li>
-            </ul>
-        </nav>
+      <nav>
+        <h1>FreshFit</h1>
+        <ul>
+          <li class="inter-headline active" data-category="Todos">Todos</li>
+          <li class="inter-headline" data-category="Acessórios">Acessórios</li>
+          <li class="inter-headline" data-category="Calçados">Calçados</li>
+          <li class="inter-headline" data-category="Camisetas">Camisetas</li>
+        </ul>
+      </nav>
     </header>
     <main>
-        <section>
-            <ul class="products-list"></ul>
-        </section>
-        <aside>
-            <form id="search-form">
-                <input class="search-input" id="search" name="search" type="text" placeholder="Digite aqui sua pesquisa">
-                <button class="search-btn" type="submit">Pesquisar</button>
-            </form>
-            <div></div>
-        </aside>
+      <section>
+        <ul class="products-list"></ul>
+        <p class="empty-product-list d-none">Nenhum produto encontrado.</p>
+      </section>
+      <aside>
+        <form id="search-form">
+          <input
+            class="search-input"
+            id="search"
+            name="search"
+            type="text"
+            placeholder="Digite aqui sua pesquisa"
+          />
+          <button class="search-btn" type="submit">Pesquisar</button>
+        </form>
+        <div class="cart">
+          <h3>Carrinho de compras</h3>
+          <div class="empty-cart">
+              <h4>Carrinho vazio</h4>
+              <p>Adicione os itens</p>
+            </div>
+            <div class="full-cart d-none">
+              <ul>
+              </ul>
+              <div class="cart-totalizers">
+                <div>
+                  <span>Quantidade:</span>
+                  <span class="cart-amount">3</span>
+                </div>
+                <div>
+                  <span>Total:</span>
+                  <span class="cart-total">R$ 200,00</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </aside>
     </main>
-</body>
+  </body>
 </html>
